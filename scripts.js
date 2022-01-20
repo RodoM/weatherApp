@@ -28,7 +28,7 @@ setInterval(() => {
 
 function searchCity() {
     var cityName = document.getElementById('city-name').value;
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${API_KEY}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${API_KEY}`)
     .then(res => res.json().then(data => {
         setCity.innerHTML = `${data[0].name}, ${data[0].state} ${data[0].country}`;
         getWeatherData(data[0].lat, data[0].lon);
@@ -47,7 +47,7 @@ function showWeatherData(data) {
 
     temperatureItems.innerHTML = 
     `
-    <img src="http://openweathermap.org/img/wn//${weather[0].icon}@4x.png" alt="weather icon" class="icon">
+    <img src="https://openweathermap.org/img/wn//${weather[0].icon}@4x.png" alt="weather icon" class="icon">
     <div class="degrees" id="current-degrees">${Math.floor(temp)}°C</div>
     <div class="weather-extra">
         <div class="thermal-sens" id="current-sens">${weather[0].main}</div>
@@ -61,7 +61,7 @@ function showWeatherData(data) {
 
     extraItems.innerHTML = 
     `
-    <div class="wind" id="current-wind"><h4>Viento</h4>${wind_speed}</div>
+    <div class="wind" id="current-wind"><h4>Viento</h4>${wind_speed}m/s</div>
     <div class="humidity" id="current-humidity"><h4>Humedad</h4>${humidity}%</div>
     <div class="preassure" id="current-preassure"><h4>Presión</h4>${pressure} mbar</div>
     <div class="sunrise" id="current-sunrise"><h4>Amanecer</h4>${addZero(sunrise_date.getHours()) + ":" + addZero(sunrise_date.getMinutes())}</div>
@@ -76,7 +76,7 @@ function showWeatherData(data) {
     <div class="main-card" id="main-card">
             <div class="day">Hoy</div>
             <div class="content">
-                <img src="http://openweathermap.org/img/wn//${data.daily[0].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
+                <img src="https://openweathermap.org/img/wn//${data.daily[0].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
                 <div class="max-min">
                     <div class="max">Máx ${Math.floor(data.daily[0].temp.max)}°C</div>
                     <div class="min">Mín ${Math.floor(data.daily[0].temp.min)}°C</div>
@@ -86,7 +86,7 @@ function showWeatherData(data) {
         <div class="card">
             <div class="day">${days2[getWeekDay(time.getDay() + 1)] + ' ' + (time.getDate() + 1)}</div>
             <div class="content">
-            <img src="http://openweathermap.org/img/wn//${data.daily[1].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
+            <img src="https://openweathermap.org/img/wn//${data.daily[1].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
                 <div class="max-min">
                 <div class="max">Máx ${Math.floor(data.daily[1].temp.max)}°C</div>
                 <div class="min">Mín ${Math.floor(data.daily[1].temp.min)}°C</div>
@@ -96,7 +96,7 @@ function showWeatherData(data) {
         <div class="card">
             <div class="day"ay3">${days2[getWeekDay(time.getDay() + 2)] + ' ' + (time.getDate() + 2)}</div>
             <div class="content">
-            <img src="http://openweathermap.org/img/wn//${data.daily[2].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
+            <img src="https://openweathermap.org/img/wn//${data.daily[2].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
                 <div class="max-min">
                 <div class="max">Máx ${Math.floor(data.daily[2].temp.max)}°C</div>
                 <div class="min">Mín ${Math.floor(data.daily[2].temp.min)}°C</div>
@@ -106,7 +106,7 @@ function showWeatherData(data) {
         <div class="card">
             <div class="day"ay4">${days2[getWeekDay(time.getDay() + 3)] + ' ' + (time.getDate() + 3)}</div>
             <div class="content">
-            <img src="http://openweathermap.org/img/wn//${data.daily[3].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
+            <img src="https://openweathermap.org/img/wn//${data.daily[3].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
                 <div class="max-min">
                 <div class="max">Máx ${Math.floor(data.daily[3].temp.max)}°C</div>
                 <div class="min">Mín ${Math.floor(data.daily[3].temp.min)}°C</div>
@@ -116,7 +116,7 @@ function showWeatherData(data) {
         <div class="card">
             <div class="day"ay5">${days2[getWeekDay(time.getDay() + 4)] + ' ' + (time.getDate() + 4)}</div>
             <div class="content">
-            <img src="http://openweathermap.org/img/wn//${data.daily[4].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
+            <img src="https://openweathermap.org/img/wn//${data.daily[4].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
                 <div class="max-min">
                 <div class="max">Máx ${Math.floor(data.daily[4].temp.max)}°C</div>
                 <div class="min">Mín ${Math.floor(data.daily[4].temp.min)}°C</div>
@@ -126,7 +126,7 @@ function showWeatherData(data) {
         <div class="card">
             <div class="day"ay6">${days2[getWeekDay(time.getDay() + 5)] + ' ' + (time.getDate() + 5)}</div>
             <div class="content">
-            <img src="http://openweathermap.org/img/wn//${data.daily[5].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
+            <img src="https://openweathermap.org/img/wn//${data.daily[5].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
                 <div class="max-min">
                 <div class="max">Máx ${Math.floor(data.daily[5].temp.max)}°C</div>
                 <div class="min">Mín ${Math.floor(data.daily[5].temp.min)}°C</div>
@@ -136,7 +136,7 @@ function showWeatherData(data) {
         <div class="card">
             <div class="day"ay7">${days2[getWeekDay(time.getDay() + 6)] + ' ' + (time.getDate() + 6)}</div>
             <div class="content">
-            <img src="http://openweathermap.org/img/wn//${data.daily[6].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
+            <img src="https://openweathermap.org/img/wn//${data.daily[6].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
                 <div class="max-min">
                 <div class="max">Máx ${Math.floor(data.daily[6].temp.max)}°C</div>
                 <div class="min">Mín ${Math.floor(data.daily[6].temp.min)}°C</div>
@@ -146,7 +146,7 @@ function showWeatherData(data) {
         <div class="card">
             <div class="day"ay7">${days2[getWeekDay(time.getDay() + 7)] + ' ' + (time.getDate() + 7)}</div>
             <div class="content">
-            <img src="http://openweathermap.org/img/wn//${data.daily[7].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
+            <img src="https://openweathermap.org/img/wn//${data.daily[7].weather[0].icon}@4x.png" alt="weather icon" class="card-icon">
                 <div class="max-min">
                 <div class="max">Máx ${Math.floor(data.daily[7].temp.max)}°C</div>
                 <div class="min">Mín ${Math.floor(data.daily[7].temp.min)}°C</div>
