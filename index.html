@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="./assets/weather-icon.svg">
+    <title>Weather App</title>
+</head>
+<body>
+    <nav class="navbar">
+        <form id="form">
+            <input type="text" id="city-name" placeholder="Ingrese el nombre de una ciudad...">
+            <button type="button" onclick="searchCity()"><img src="./assets/search-icon.svg" id="btn"></button>
+        </form>
+        <!-- <div class="unit">
+            <button>°F</button>
+            <button>°C</button>
+        </div>    -->
+    </nav>
+    <div class="container">
+        <div class="city">
+            <img src="./assets/map-pin.svg" alt="">
+            <div class="title" id="current-city">Obteniendo infromación...</div>
+        </div>
+        <div class="today" id="today">
+            <div class="time">
+                <h1>Tiempo actual</h1>
+                <div class="hour" id="current-time"></div>
+            </div>
+            <div class="temperature" id="temperature">
+                <div class="degrees"></div>
+                <div class="weather-extra">
+                    <div class="thermal-sens"></div>
+                    <div class="weather"></div>
+                </div>
+            </div>
+            <div class="extra" id="extra">
+                <div class="wind"><h4>Viento</h4></div>
+                <div class="humidity"><h4>Humedad</h4></div>
+                <div class="preassure"><h4>Presión</h4></div>
+                <div class="sunrise"><h4>Amanecer</h4></div>
+                <div class="sunset"><h4>Anochecer</h4></div>
+            </div>
+        </div>
+        <div class="forecast">
+            <img src="./assets/calendar.svg" alt="">
+            <div class="title">Pronóstico de la semana</div>
+        </div>
+        <div class="week" id="week">
+            <div class="main-card" id="main-card">
+                <div class="day">Cargando...</div>
+                <div class="content">
+                    <p>icon</p>
+                    <div class="max-min">
+                        <div class="max">Máx</div>
+                        <div class="min">Mín</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="day">Cargando...</div>
+                <div class="content">
+                    <p>icon</p>
+                    <div class="max-min">
+                        <div class="max">Máx</div>
+                        <div class="min">Mín</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="day"ay3">Cargando...</div>
+                <div class="content">
+                    <p>icon</p>
+                    <div class="max-min">
+                        <div class="max">Máx</div>
+                        <div class="min">Mín</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="day"ay4">Cargando...</div>
+                <div class="content">
+                    <p>icon</p>
+                    <div class="max-min">
+                        <div class="max">Máx</div>
+                        <div class="min">Mín</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="day"ay5">Cargando...</div>
+                <div class="content">
+                    <p>icon</p>
+                    <div class="max-min">
+                        <div class="max">Máx</div>
+                        <div class="min">Mín</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="day"ay6">Cargando...</div>
+                <div class="content">
+                    <p>icon</p>
+                    <div class="max-min">
+                        <div class="max">Máx</div>
+                        <div class="min">Mín</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="day"ay7">Cargando...</div>
+                <div class="content">
+                    <p>icon</p>
+                    <div class="max-min">
+                        <div class="max">Máx</div>
+                        <div class="min">Mín</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="name">RodoM</div>
+        <div class="social-media">
+            <a href="https://www.instagram.com/rodo.meroi/"><img src="./assets/ig-icon.svg" alt="instagram"></a>
+            <a href="https://www.linkedin.com/in/rodolfo-meroi/"><img src="./assets/li-icon.svg" alt="linkedin"></a>
+            <a href="mailto:rodomeroi@gmail.com"><img src="./assets/gm-icon.svg" alt="email"></a>
+            <a href="https://github.com/RodoM"><img src="./assets/gh-icon.svg" alt="github"></a>
+        </div>
+    </footer>
+    <script src="./scripts.js"></script>
+</body>
+</html>
