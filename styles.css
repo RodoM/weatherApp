@@ -5,6 +5,7 @@
     --darkPurple: #6A5ADF;
     --lightPurple: #ABA2F1;
     --lightYellow: #F9CF57;
+    --darkYellow: #fac124;
     --lightGrey: #F4F2FD;
     --white: #FEFEFE;
     --shadow: 1px 10px 23px 2px rgba(106,90,223,0.51);
@@ -56,6 +57,11 @@ form button {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: var(--darkYellow);
 }
 
 .container {

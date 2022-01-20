@@ -15,7 +15,7 @@
 
 ### Links
 
-- Live Site URL: [Here](https://rodom-tip-calculator.netlify.app/)
+- Live Site URL: [Here](https://rodom-weatherapp.netlify.app/)
 
 ### Built with
 
